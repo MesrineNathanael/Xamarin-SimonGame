@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AppSimuAuto.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:extensions="http://xamarin.com/schemas/2020/toolkit"
+    Background="#18122B">
+
+    <extensions:DockLayout LastChildFill="False">
+        <Frame
+            Padding="5"
+            extensions:DockLayout.Dock="Top"
+            BackgroundColor="#393053"
+            CornerRadius="0">
+            <Label
+                FontSize="32"
+                HorizontalTextAlignment="Center"
+                Text="Simon douze"
+                TextColor="White" />
+
+        </Frame>
+
+        <Frame
+            Margin="20,0,20,60"
+            Padding="20"
+            extensions:DockLayout.Dock="Bottom"
+            BackgroundColor="#393053"
+            CornerRadius="10"
+            OutlineColor="#393053">
+            <Grid x:Name="ButtonGrid" HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="80" />
+                </Grid.ColumnDefinitions>
+
+            </Grid>
+        </Frame>
+        <Button
+            x:Name="StartButton"
+            Margin="20,30"
+            extensions:DockLayout.Dock="Top"
+            Background="#393053"
+            Clicked="StartButton_Clicked"
+            Text="Start"
+            TextColor="White" />
+
+        <Label
+            x:Name="StateLabel"
+            Margin="20,60,20,10"
+            extensions:DockLayout.Dock="Top"
+            FontSize="24"
+            HorizontalOptions="Center"
+            Text="Waiting to start..."
+            TextColor="White" />
+
+        <Label
+            x:Name="CurrentScoreLabel"
+            extensions:DockLayout.Dock="Top"
+            FontSize="22"
+            HorizontalTextAlignment="Center"
+            Text="Current score :"
+            TextColor="White" />
+
+        <Label
+            x:Name="LastScoreLabel"
+            extensions:DockLayout.Dock="Top"
+            FontSize="22"
+            HorizontalTextAlignment="Center"
+            Text="Last score :"
+            TextColor="White" />
+
+    </extensions:DockLayout>
+
+</ContentPage>
